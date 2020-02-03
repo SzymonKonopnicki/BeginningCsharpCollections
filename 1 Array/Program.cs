@@ -23,21 +23,13 @@ namespace _1_Array
                 "December"
             };
 
-            int[] arrayInt = { 4, 77, 65, 34 };
+            Console.WriteLine("Which month do you want to display?");
+            Console.WriteLine("January = 1, February = 2, etc. : ");
 
-            char[] arrayChar = { 'h', 'e', 'y', '6' };
+            int month = int.Parse(Console.ReadLine());
+            string chosenMonth = monthsOfYear[month - 1];
 
-            System.Drawing.Rectangle[] arrayRectangle =
-            {
-                new System.Drawing.Rectangle(10, 10, 50, 50),
-                new System.Drawing.Rectangle(30, 30, 50, 50),
-                new System.Drawing.Rectangle(20, 100, 100, 50)
-            };
-
-            foreach (var month in monthsOfYear)
-            {
-                Console.WriteLine(month);
-            }
+            Console.WriteLine($"That month is {chosenMonth}");
 
         }
     }
