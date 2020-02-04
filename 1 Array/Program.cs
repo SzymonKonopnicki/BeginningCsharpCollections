@@ -10,7 +10,7 @@ namespace _1_Array
             string[] monthsOfYear =
             {
                 "January",
-                "February",
+                "Febrry",
                 "March",
                 "April",
                 "May",
@@ -23,14 +23,17 @@ namespace _1_Array
                 "December"
             };
 
-            Console.WriteLine("Which month do you want to display?");
-            Console.WriteLine("January = 1, February = 2, etc. : ");
+            Console.WriteLine("Before editing: ");
 
-            int month = int.Parse(Console.ReadLine());
-            string chosenMonth = monthsOfYear[month - 1];
+            foreach (var month in monthsOfYear)
+                Console.WriteLine(month);           
 
-            Console.WriteLine($"That month is {chosenMonth}");
+            monthsOfYear[1] = "February";
 
+            Console.WriteLine("\nAfter editing: ");
+
+            foreach (var month in monthsOfYear)
+                Console.WriteLine(month);
         }
     }
 }
