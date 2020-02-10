@@ -14,7 +14,7 @@ namespace _2_ArrayPracticalExample
 
             foreach (var city in citys)
             {
-                Console.WriteLine($"{city.TotalPopulation} : {city.CityCode} : {city.CityName}");
+                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }
     }

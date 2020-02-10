@@ -1,4 +1,6 @@
-﻿namespace _2_ArrayPracticalExample
+﻿using System.IO;
+
+namespace _2_ArrayPracticalExample
 {
     public class CsvReader
     {
@@ -12,6 +14,19 @@
         public City[] ReadFirstNCiyts(int nCitys)
         {
             City[] citys = new City[nCitys];
+
+            using (StreamReader streamReader = new StreamReader(_csvFilePath))
+            {
+                // read header line
+                streamReader.ReadLine();
+
+                for (int i = 0; i < nCitys; i++)
+                {
+                    string csvLine = streamReader.ReadLine();
+                    citys[i] = ReadCityFromCsvLine(csvLine);
+                }
+            }
+
             return citys;
         }
 
