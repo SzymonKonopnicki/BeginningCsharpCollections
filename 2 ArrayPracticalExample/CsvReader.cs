@@ -17,7 +17,7 @@
 
         public City ReadCityFromCsvLine(string csvLine)
         {
-            string[] parts = csvLine.Split(',');
+            string[] parts = csvLine.Split(new char[] { ',' });
 
             string cityName = parts[0];
             string cityCode = parts[1];
