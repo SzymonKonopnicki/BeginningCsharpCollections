@@ -15,7 +15,7 @@ namespace _3_List
 
             City cityTest = new City("Test", "TES", "Polska", 3000000, 1600000, 1400000);
 
-            int index;
+            int index = citys.FindIndex(city => city.TotalPopulation < 3000000);
             citys.Insert(index, cityTest);
 
             foreach (var city in citys)
