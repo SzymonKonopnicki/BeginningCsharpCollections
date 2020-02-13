@@ -13,6 +13,11 @@ namespace _3_List
 
             List<City> citys = csvReader.ReadAllCiyts();
 
+            City cityTest = new City("Test", "TES", "Polska", 3000000, 1600000, 1400000);
+
+            int index;
+            citys.Insert(index, cityTest);
+
             foreach (var city in citys)
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
