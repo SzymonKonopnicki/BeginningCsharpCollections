@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace _3_List
 {
@@ -11,19 +12,19 @@ namespace _3_List
             _csvFilePath = csvFilePath;
         }
 
-        public City[] ReadFirstNCiyts(int nCitys)
+        public List<City> ReadAllCiyts()
         {
-            City[] citys = new City[nCitys];
+            List<City> citys = new List<City>();
 
             using (StreamReader streamReader = new StreamReader(_csvFilePath))
             {
                 // read header line
                 streamReader.ReadLine();
 
-                for (int i = 0; i < nCitys; i++)
-                {
-                    string csvLine = streamReader.ReadLine();
-                    citys[i] = ReadCityFromCsvLine(csvLine);
+                string csvLine;
+                while((csvLine = streamReader.ReadLine()) != null)
+                { 
+                    citys.Add(ReadCityFromCsvLine(csvLine));
                 }
             }
 

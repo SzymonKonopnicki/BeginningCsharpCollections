@@ -6,28 +6,17 @@ namespace _3_List
     class Program
     {
         static void Main(string[] args)
-        {           
-            List<int> ints = new List<int>();
+        {
+            string filePath = @"C:\Users\user\source\repos\BeginningCsharpCollections\2 ArrayPracticalExample\population.csv";
 
-            List<char> chars = new List<char>();
+            CsvReader csvReader = new CsvReader(filePath);
 
+            List<City> citys = csvReader.ReadAllCiyts();
 
-            List<string> months = new List<string>
+            foreach (var city in citys)
             {
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"
-            };
-
+                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+            }
         }
     }
 }
