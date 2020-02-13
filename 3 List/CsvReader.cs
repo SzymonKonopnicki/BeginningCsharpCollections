@@ -1,4 +1,6 @@
-﻿namespace _3_List
+﻿using System.IO;
+
+namespace _3_List
 {
     public class CsvReader
     {
