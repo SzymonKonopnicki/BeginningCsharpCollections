@@ -17,6 +17,9 @@ namespace _3_List
 
             int index = citys.FindIndex(city => city.TotalPopulation < 3000000);
             citys.Insert(index, cityTest);
+            //citys.RemoveAt(index);
+            citys.Remove(cityTest);
+
 
             foreach (var city in citys)
             {
