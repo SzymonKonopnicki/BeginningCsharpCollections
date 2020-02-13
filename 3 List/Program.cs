@@ -17,6 +17,9 @@ namespace _3_List
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
+
+            Console.WriteLine($"{citys.Count} citys");
+
         }
     }
 }
