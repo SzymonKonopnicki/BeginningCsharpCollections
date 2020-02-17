@@ -17,6 +17,8 @@ namespace _4_Dictionary
 
             int index = citys.FindIndex(city => city.TotalPopulation < 3000000);
 
+            int index2 = citys.FindIndex(city => city.CityCode == "SLA");
+
             foreach (var city in citys)
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
