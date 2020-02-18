@@ -15,8 +15,10 @@ namespace _4_Dictionary
             citys.Add(slaskie.CityCode, slaskie);
             citys.Add(malopolskie.CityCode, malopolskie);
 
-            City selectedCity = citys["SLA"];
-            Console.WriteLine(selectedCity.CityName);
+            foreach (var city in citys.Values)
+            {
+                Console.WriteLine(city);
+            }
 
         }
     }
