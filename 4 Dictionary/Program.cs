@@ -12,6 +12,9 @@ namespace _4_Dictionary
 
             var citys = new Dictionary<string, City>();
 
+            citys.Add(slaskie.CityCode, slaskie);
+            citys.Add(malopolskie.CityCode, malopolskie);
+
         }
     }
 }
