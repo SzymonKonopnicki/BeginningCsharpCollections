@@ -7,24 +7,11 @@ namespace _4_Dictionary
     {
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\user\source\repos\BeginningCsharpCollections\2 ArrayPracticalExample\population.csv";
+            City slaskie = new City("Slaskie", "SLA", "Polska", 4524091, 2180662, 2343429);
+            City malopolskie = new City("Malopolskie", "MLP", "Polska", 3404863, 1652663, 1752200);
 
-            CsvReader csvReader = new CsvReader(filePath);
+            var citys = new Dictionary<string, City>();
 
-            List<City> citys = csvReader.ReadAllCiyts();
-
-            City cityTest = new City("Test", "TES", "Polska", 3000000, 1600000, 1400000);
-
-            int index = citys.FindIndex(city => city.TotalPopulation < 3000000);
-
-            int index2 = citys.FindIndex(city => city.CityCode == "SLA");
-
-            foreach (var city in citys)
-            {
-                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
-            }
-
-            Console.WriteLine($"{citys.Count} citys");
         }
     }
 }
