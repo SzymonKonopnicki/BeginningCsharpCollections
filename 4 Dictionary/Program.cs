@@ -10,10 +10,11 @@ namespace _4_Dictionary
             City slaskie = new City("Slaskie", "SLA", "Polska", 4524091, 2180662, 2343429);
             City malopolskie = new City("Malopolskie", "MLP", "Polska", 3404863, 1652663, 1752200);
 
-            var citys = new Dictionary<string, City>();
-
-            citys.Add(slaskie.CityCode, slaskie);
-            citys.Add(malopolskie.CityCode, malopolskie);
+            var citys = new Dictionary<string, City>
+            {
+                { slaskie.CityCode, slaskie },
+                { malopolskie.CityCode, malopolskie }
+            };
 
             foreach (var city in citys.Values)
             {
