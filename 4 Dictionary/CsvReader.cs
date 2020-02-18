@@ -12,9 +12,9 @@ namespace _4_Dictionary
             _csvFilePath = csvFilePath;
         }
 
-        public List<City> ReadAllCiyts()
+        public Dictionary<string, City> ReadAllCiyts()
         {
-            List<City> citys = new List<City>();
+            var citys = new Dictionary<string, City>();
 
             using (StreamReader streamReader = new StreamReader(_csvFilePath))
             {
@@ -24,7 +24,8 @@ namespace _4_Dictionary
                 string csvLine;
                 while ((csvLine = streamReader.ReadLine()) != null)
                 {
-                    citys.Add(ReadCityFromCsvLine(csvLine));
+                    City city = ReadCityFromCsvLine(csvLine);
+                    citys.Add(city.CityCode, city);
                 }
             }
 
