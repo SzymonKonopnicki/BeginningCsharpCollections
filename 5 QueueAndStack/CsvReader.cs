@@ -12,9 +12,9 @@ namespace _5_QueueAndStack
             _csvFilePath = csvFilePath;
         }
 
-        public List<City> ReadAllCiyts()
+        public Stack<City> ReadAllCiyts()
         {
-            List<City> citys = new List<City>();
+            Stack<City> citys = new Stack<City>();
 
             using (StreamReader streamReader = new StreamReader(_csvFilePath))
             {
@@ -24,7 +24,7 @@ namespace _5_QueueAndStack
                 string csvLine;
                 while ((csvLine = streamReader.ReadLine()) != null)
                 {
-                    citys.Add(ReadCityFromCsvLine(csvLine));
+                    citys.Push(ReadCityFromCsvLine(csvLine));
                 }
             }
 
