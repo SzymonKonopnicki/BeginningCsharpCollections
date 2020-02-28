@@ -8,6 +8,14 @@ namespace _5_QueueAndStack
         static void Main(string[] args)
         {
             Queue<Customer> queue = new Queue<Customer>();
+
+            queue.Enqueue(new Customer { Name = "Marcin" });
+            queue.Enqueue(new Customer { Name = "Tomek" });
+            queue.Enqueue(new Customer { Name = "Adam" });
+            queue.Enqueue(new Customer { Name = "Iza" });
+            queue.Enqueue(new Customer { Name = "Ola" });
+            queue.Enqueue(new Customer { Name = "Piotrek" });
+
         }
     }
 }
