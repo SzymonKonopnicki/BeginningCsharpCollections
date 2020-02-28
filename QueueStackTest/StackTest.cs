@@ -35,5 +35,25 @@ namespace QueueStackTest
 
             Assert.IsTrue(stack.Contains(5));
         }
+
+        [TestMethod]
+        public void StackUseToArray()
+        {
+            var stack = new Stack<int>();
+
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+            stack.Push(6);
+
+            var array = stack.ToArray();
+            stack.Pop();
+
+            Assert.AreEqual(6, array[0]);
+            Assert.AreEqual(6, array.Length);
+            Assert.AreEqual(5, stack.Count);
+        }
     }
 }
