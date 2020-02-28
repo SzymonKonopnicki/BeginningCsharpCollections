@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 List", "3 List\3 List.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 Dictionary", "4 Dictionary\4 Dictionary.csproj", "{1E0F0C11-2642-4EEF-A718-FFE2F270E350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5 QueueAndStack", "5 QueueAndStack\5 QueueAndStack.csproj", "{B2F3A6F3-E79D-47B0-97A2-C835B7B15D8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5 QueueAndStack", "5 QueueAndStack\5 QueueAndStack.csproj", "{B2F3A6F3-E79D-47B0-97A2-C835B7B15D8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueStackTest", "QueueStackTest\QueueStackTest.csproj", "{57A82B82-61EC-44F5-BF60-E664AF389F60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B2F3A6F3-E79D-47B0-97A2-C835B7B15D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2F3A6F3-E79D-47B0-97A2-C835B7B15D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F3A6F3-E79D-47B0-97A2-C835B7B15D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A82B82-61EC-44F5-BF60-E664AF389F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A82B82-61EC-44F5-BF60-E664AF389F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A82B82-61EC-44F5-BF60-E664AF389F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A82B82-61EC-44F5-BF60-E664AF389F60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
