@@ -22,6 +22,8 @@ namespace _5_QueueAndStack
                 Console.WriteLine(customer.Name);
                 Console.WriteLine("Ilość w kolejce: " + queue.Count);
             }
+
+            Stack<Book> stack = new Stack<Book>();
         }
     }
 }
