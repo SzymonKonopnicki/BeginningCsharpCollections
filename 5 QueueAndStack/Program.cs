@@ -31,6 +31,13 @@ namespace _5_QueueAndStack
             stack.Push(new Book { Name = "Books 4" });
             stack.Push(new Book { Name = "Books 5" });
             stack.Push(new Book { Name = "Books 6" });
+
+            while (stack.Count > 0)
+            {
+                var book = stack.Pop();
+                Console.WriteLine(book.Name);
+                Console.WriteLine("Ilość na stosie: " + stack.Count);
+            }
         }
     }
 }
