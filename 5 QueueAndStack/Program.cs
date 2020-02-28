@@ -24,6 +24,13 @@ namespace _5_QueueAndStack
             }
 
             Stack<Book> stack = new Stack<Book>();
+
+            stack.Push(new Book { Name = "Books 1" });
+            stack.Push(new Book { Name = "Books 2" });
+            stack.Push(new Book { Name = "Books 3" });
+            stack.Push(new Book { Name = "Books 4" });
+            stack.Push(new Book { Name = "Books 5" });
+            stack.Push(new Book { Name = "Books 6" });
         }
     }
 }
