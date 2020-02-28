@@ -15,7 +15,13 @@ namespace _5_QueueAndStack
             queue.Enqueue(new Customer { Name = "Iza" });
             queue.Enqueue(new Customer { Name = "Ola" });
             queue.Enqueue(new Customer { Name = "Piotrek" });
-
+         
+            while (queue.Count > 0)
+            {
+                var customer = queue.Dequeue();
+                Console.WriteLine(customer.Name);
+                Console.WriteLine("Ilość w kolejce: " + queue.Count);
+            }
         }
     }
 }
