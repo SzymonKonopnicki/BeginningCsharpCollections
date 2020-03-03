@@ -13,8 +13,9 @@ namespace _6_WorkWithList
 
             List<City> citys = csvReader.ReadAllCiyts();
 
-            foreach (var city in citys)
+            for (int i = 0; i < citys.Count; i++)
             {
+                City city = citys[i];
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }

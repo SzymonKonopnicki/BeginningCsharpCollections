@@ -12,8 +12,9 @@ namespace _2_ArrayPracticalExample
 
             City[] citys = csvReader.ReadFirstNCiyts(7);
 
-            foreach (var city in citys)
+            for (int i = 0; i < citys.Length; i++)
             {
+                City city = citys[i];
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }
