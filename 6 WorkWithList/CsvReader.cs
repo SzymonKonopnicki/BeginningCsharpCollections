@@ -47,11 +47,7 @@ namespace _6_WorkWithList
 
         public void RemoveTestCitys(List<City> citys)
         {
-            for (int i = citys.Count - 1; i >= 0; i--)
-            {
-                if (citys[i].CityName.Contains("Test"))
-                    citys.RemoveAt(i);
-            }
+            citys.RemoveAll(c => c.CityName.Contains("Test"));         
         }
     }
 }
