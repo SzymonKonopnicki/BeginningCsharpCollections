@@ -13,7 +13,18 @@ namespace _6_WorkWithList
 
             List<City> citys = csvReader.ReadAllCiyts();
 
-            for (int i = 0; i < citys.Count; i++)
+            Console.Write("Enter how many cities you want to diplay: ");
+
+            bool inputIsInt = int.TryParse(Console.ReadLine(), out int userInput);
+            if (!inputIsInt || userInput <= 0)
+            {
+                Console.WriteLine("You must enter a positive integer!");
+                return;
+            }
+
+            int maxToDisplay = Math.Min(userInput, citys.Count);
+
+            for (int i = 0; i < maxToDisplay; i++)
             {
                 City city = citys[i];
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
