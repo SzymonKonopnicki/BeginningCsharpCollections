@@ -24,9 +24,10 @@ namespace _6_WorkWithList
 
             int maxToDisplay = userInput;
 
-            for (int i = 0; i < citys.Count; i++)
+            for (int i = citys.Count -1; i >= 0; i--)
             {
-                if (i > 0 && (i % maxToDisplay == 0))
+                int displayIndex = citys.Count - 1 - i;
+                if (displayIndex > 0 && (displayIndex % maxToDisplay == 0))
                 {
                     Console.WriteLine("Hit return to continue, anything else to quite: ");
                     if (Console.ReadLine() != "")
@@ -34,7 +35,7 @@ namespace _6_WorkWithList
                 }
 
                 City city = citys[i];
-                Console.WriteLine($"{i + 1} - {city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+                Console.WriteLine($"{displayIndex + 1} - {city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }
     }
