@@ -44,5 +44,14 @@ namespace _6_WorkWithList
 
             return new City(cityName, cityCode, country, totalPopulation, menPopulation, womenPopulation);
         }
+
+        public void RemoveTestCitys(List<City> citys)
+        {
+            for (int i = citys.Count - 1; i >= 0; i--)
+            {
+                if (citys[i].CityName.Contains("Test"))
+                    citys.RemoveAt(i);
+            }
+        }
     }
 }

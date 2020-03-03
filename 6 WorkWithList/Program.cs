@@ -13,6 +13,8 @@ namespace _6_WorkWithList
 
             List<City> citys = csvReader.ReadAllCiyts();
 
+            csvReader.RemoveTestCitys(citys);
+
             Console.Write("Enter how many cities you want to diplay: ");
 
             bool inputIsInt = int.TryParse(Console.ReadLine(), out int userInput);
@@ -24,10 +26,9 @@ namespace _6_WorkWithList
 
             int maxToDisplay = userInput;
 
-            for (int i = citys.Count -1; i >= 0; i--)
+            for (int i = 0; i < citys.Count; i++)
             {
-                int displayIndex = citys.Count - 1 - i;
-                if (displayIndex > 0 && (displayIndex % maxToDisplay == 0))
+                if (i > 0 && (i % maxToDisplay == 0))
                 {
                     Console.WriteLine("Hit return to continue, anything else to quite: ");
                     if (Console.ReadLine() != "")
@@ -35,7 +36,7 @@ namespace _6_WorkWithList
                 }
 
                 City city = citys[i];
-                Console.WriteLine($"{displayIndex + 1} - {city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+                Console.WriteLine($"{i + 1} - {city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }
     }
