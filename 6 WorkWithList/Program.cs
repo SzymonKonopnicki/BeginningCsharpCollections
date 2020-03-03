@@ -22,12 +22,19 @@ namespace _6_WorkWithList
                 return;
             }
 
-            int maxToDisplay = Math.Min(userInput, citys.Count);
+            int maxToDisplay = userInput;
 
-            for (int i = 0; i < maxToDisplay; i++)
+            for (int i = 0; i < citys.Count; i++)
             {
+                if (i > 0 && (i % maxToDisplay == 0))
+                {
+                    Console.WriteLine("Hit return to continue, anything else to quite: ");
+                    if (Console.ReadLine() != "")
+                        break;
+                }
+
                 City city = citys[i];
-                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+                Console.WriteLine($"{i + 1} - {city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
         }
     }
