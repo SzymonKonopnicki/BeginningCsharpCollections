@@ -16,7 +16,7 @@ namespace _7_LINQ
 
             csvReader.RemoveTestCitys(citys);
 
-            foreach (var city in citys.Take(5))
+            foreach (var city in citys.OrderBy(c => c.CityName))
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
