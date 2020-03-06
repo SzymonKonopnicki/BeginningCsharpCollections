@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5 QueueAndStack", "5 QueueA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueStackTest", "QueueStackTest\QueueStackTest.csproj", "{57A82B82-61EC-44F5-BF60-E664AF389F60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6 WorkWithList", "6 WorkWithList\6 WorkWithList.csproj", "{F4C4519E-2C20-478E-8DFD-259D16D190D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6 WorkWithList", "6 WorkWithList\6 WorkWithList.csproj", "{F4C4519E-2C20-478E-8DFD-259D16D190D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7 LINQ", "7 LINQ\7 LINQ.csproj", "{6CF91267-BEC2-41A8-86DC-7CFB03084E80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{F4C4519E-2C20-478E-8DFD-259D16D190D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C4519E-2C20-478E-8DFD-259D16D190D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C4519E-2C20-478E-8DFD-259D16D190D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF91267-BEC2-41A8-86DC-7CFB03084E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF91267-BEC2-41A8-86DC-7CFB03084E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF91267-BEC2-41A8-86DC-7CFB03084E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF91267-BEC2-41A8-86DC-7CFB03084E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
