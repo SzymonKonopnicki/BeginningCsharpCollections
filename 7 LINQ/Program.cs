@@ -14,23 +14,16 @@ namespace _7_LINQ
 
             List<City> citys = csvReader.ReadAllCiyts();
 
-            //foreach (var city in citys.Where(c => !c.CityName.Contains("Test")).Take(10))
-            //{
-            //    Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
-            //}
+            var filteredCitys = citys.Where(c => !c.CityName.Contains("Test")).Take(10);
 
-            //for (int i = 3; i <= 8; i++)
-            //    Console.WriteLine(citys[i].CityName);
+            var filteredCitys2 = (from city in citys
+                                  where !city.CityName.Contains("Test")
+                                  select city).Take(10);
 
-
-            Console.WriteLine($"{citys.Max(c => c.MenPopulation):### ### ###} - The city with the largest male population");
-            Console.WriteLine($"{citys.Min(c => c.WomenPopulation):### ### ###} - The city with the smallest female population");
-            Console.WriteLine($"{citys.Sum(c => c.TotalPopulation):### ### ###} - Total population of all cities");
-
-            Console.WriteLine($"{citys.Average(c => c.MenPopulation):### ### ###} - Average male population");
-
-            Console.WriteLine(citys.All(c => c.TotalPopulation > 200000));
-            Console.WriteLine(citys.Any(c => c.TotalPopulation > 20000000));
+            foreach (var city in filteredCitys2)
+            {
+                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+            }
         }
     }
 }
