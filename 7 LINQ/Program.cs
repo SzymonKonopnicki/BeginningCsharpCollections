@@ -12,14 +12,15 @@ namespace _7_LINQ
 
             CsvReader csvReader = new CsvReader(filePath);
 
-            List<City> citys = csvReader.ReadAllCiyts();
+            List<City> citys = csvReader.ReadAllCiyts();          
 
-            csvReader.RemoveTestCitys(citys);
-
-            foreach (var city in citys.Take(5).OrderBy(c => c.CityName))
+            foreach (var city in citys.Where(c => !c.CityName.Contains("Test")).Take(10))
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
+
+            for (int i = 3; i <= 8; i++)
+                Console.WriteLine(citys[i].CityName);
         }
     }
 }
