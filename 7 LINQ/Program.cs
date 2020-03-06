@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _7_LINQ
 {
@@ -15,7 +16,7 @@ namespace _7_LINQ
 
             csvReader.RemoveTestCitys(citys);
 
-            foreach (var city in citys)
+            foreach (var city in citys.Take(5))
             {
                 Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
             }
