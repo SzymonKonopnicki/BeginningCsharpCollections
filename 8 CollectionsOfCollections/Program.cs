@@ -17,16 +17,22 @@ namespace _8_CollectionsOfCollections
             foreach (string country in citys.Keys)
                 Console.WriteLine(country);
 
-            Console.WriteLine("Which country do you want? ");
-            string chosenCountry = Console.ReadLine();
-
-            if (citys.ContainsKey(chosenCountry))
+            while(true)
             {
-                foreach (City city in citys[chosenCountry].Take(10))
-                    Console.WriteLine($"{city.TotalPopulation: ### ### ###} : {city.CityName}");
-            }
-            else
-                Console.WriteLine("That is not a valid country");
+                Console.WriteLine("Which country do you want? ");
+                string chosenCountry = Console.ReadLine();
+
+                if (chosenCountry == "")
+                    break;
+
+                if (citys.ContainsKey(chosenCountry))
+                {
+                    foreach (City city in citys[chosenCountry].Take(10))
+                        Console.WriteLine($"{city.TotalPopulation: ### ### ###} : {city.CityName}");
+                }
+                else
+                    Console.WriteLine("That is not a valid country");
+            }          
         }
     }
 }
