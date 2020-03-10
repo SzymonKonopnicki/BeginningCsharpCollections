@@ -12,9 +12,9 @@ namespace _8_CollectionsOfCollections
             _csvFilePath = csvFilePath;
         }
 
-        public List<City> ReadAllCiyts()
+        public Dictionary<string, List<City>> ReadAllCiyts()
         {
-            List<City> citys = new List<City>();
+            var citys = new Dictionary<string, List<City>>();
 
             using (StreamReader streamReader = new StreamReader(_csvFilePath))
             {
@@ -22,9 +22,20 @@ namespace _8_CollectionsOfCollections
                 streamReader.ReadLine();
 
                 string csvLine;
+
                 while ((csvLine = streamReader.ReadLine()) != null)
                 {
-                    citys.Add(ReadCityFromCsvLine(csvLine));
+                    City city = ReadCityFromCsvLine(csvLine);
+
+                    if (citys.ContainsKey(city.Country))
+                    {
+                        citys[city.Country].Add(city);
+                    }
+                    else
+                    {
+                        List<City> citysInCountry = new List<City>() { city };
+                        citys.Add(city.Country, citysInCountry);
+                    }
                 }
             }
 
