@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7 LINQ", "7 LINQ\7 LINQ.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8 CollectionsOfCollections", "8 CollectionsOfCollections\8 CollectionsOfCollections.csproj", "{2CC89630-B8E0-4323-8F36-45551CF874AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8 Game", "8 Game\8 Game.csproj", "{FE66BA0B-6BAC-4F13-9E94-918728D35260}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{2CC89630-B8E0-4323-8F36-45551CF874AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC89630-B8E0-4323-8F36-45551CF874AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC89630-B8E0-4323-8F36-45551CF874AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE66BA0B-6BAC-4F13-9E94-918728D35260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE66BA0B-6BAC-4F13-9E94-918728D35260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE66BA0B-6BAC-4F13-9E94-918728D35260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE66BA0B-6BAC-4F13-9E94-918728D35260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
