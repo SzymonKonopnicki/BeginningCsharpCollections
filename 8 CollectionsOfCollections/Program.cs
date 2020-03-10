@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _8_CollectionsOfCollections
 {
@@ -11,12 +12,21 @@ namespace _8_CollectionsOfCollections
 
             CsvReader csvReader = new CsvReader(filePath);
 
-            List<City> citys = csvReader.ReadAllCiyts();
+            Dictionary<string, List<City>> citys = csvReader.ReadAllCiyts();
 
-            foreach (var city in citys)
+            foreach (string country in citys.Keys)
+                Console.WriteLine(country);
+
+            Console.WriteLine("Which country do you want? ");
+            string chosenCountry = Console.ReadLine();
+
+            if (citys.ContainsKey(chosenCountry))
             {
-                Console.WriteLine($"{city.TotalPopulation:### ### ###} : {city.CityCode} : {city.CityName}");
+                foreach (City city in citys[chosenCountry].Take(10))
+                    Console.WriteLine($"{city.TotalPopulation: ### ### ###} : {city.CityName}");
             }
+            else
+                Console.WriteLine("That is not a valid country");
         }
     }
 }
