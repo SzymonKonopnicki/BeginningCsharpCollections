@@ -4,12 +4,7 @@ namespace _8_Game
 {
     public class TicTacToe
     {
-        private Square[][] board =
-        {
-            new Square[3],
-            new Square[3],
-            new Square[3]
-        };
+        private Square[,] board = new Square[3, 3];
 
         public void PlayGame()
         {
@@ -35,7 +30,7 @@ namespace _8_Game
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Console.Write(" " + board[i][j]);
+                    Console.Write(" " + board[i,j]);
                 }
 
                 Console.WriteLine();
@@ -58,13 +53,13 @@ namespace _8_Game
             if (row < 1 || row > 3 || column < 1 || column > 3)
                 return false;
 
-            if (board[row - 1][column - 1].Owner != Player.None)
+            if (board[row - 1, column - 1].Owner != Player.None)
             {
                 Console.WriteLine("Board occupied !");
                 return false;
             }
 
-            board[row - 1][column - 1] = new Square(player);
+            board[row - 1, column - 1] = new Square(player);
             return true;
         }
     }
