@@ -1,5 +1,6 @@
 # BeginningCsharpCollections
 C# Seria Programista – część 4 – Wprowadzenie Do Kolekcji
+
 mariuszjurczenko@dev-hobby.pl
 
 Prawie każda prawdziwa aplikacja będzie wymagać kolekcji, ponieważ jeśli twój program wykorzystuje jakiekolwiek dane, 
