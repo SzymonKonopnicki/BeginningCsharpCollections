@@ -1,4 +1,6 @@
 # BeginningCsharpCollections
+C# Seria Programista – część 4 – Wprowadzenie Do Kolekcji
+mariuszjurczenko@dev-hobby.pl
 
 Prawie każda prawdziwa aplikacja będzie wymagać kolekcji, ponieważ jeśli twój program wykorzystuje jakiekolwiek dane, 
 prawdopodobnie potrzebuje kolekcji do ich przechowywania i pracy z tymi danymi.
@@ -14,3 +16,5 @@ Nauczę cię dobrych technik wykorzystywania kolekcji.
 Takich jak wyszukiwanie, wyliczanie i modyfikowanie danych w kolekcjach,
 a nawet uzyskasz bardzo szybki przegląd tego, w jaki sposób LINQ 
 może pomóc w wydobyciu danych z kolekcji.
+
+Link do kursu https://dev-hobby.pl/kursy/c-wprowadzenie-do-kolekcji/
